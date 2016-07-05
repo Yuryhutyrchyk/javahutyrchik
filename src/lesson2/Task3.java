@@ -12,10 +12,10 @@ public class Task3 {
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {  		// TODO Auto-generated method stub
-		Scanner scn = new Scanner(System.in);
-		int num1 = 0;
-		int num2 = 0;
+	public static void main(String[] args) { // main method calculates the value of the division of two numbers
+		Scanner scn = new Scanner(System.in); 
+		int num1 = 0; 
+		int num2 = 0; 
 		double result = 0;
 		String strResult = "";
 		System.out.println("¬ведите первое число: ");
