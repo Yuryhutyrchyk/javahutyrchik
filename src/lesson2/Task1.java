@@ -13,16 +13,32 @@ public class Task1 {
 	 * @param args
 	 */
 	public static void main(String[] args) { // main method
-		String str = "Например в Java есть весьма наглядный класс java.util.Calendar. В его арсенале достаточно много полезных и нужных функций, но есть одна особенность — он не реализует какой-то конкретный календарь. Думаю, вы знакомы с тем фактом, что на Земле люди живут по разным календарям. Светские власти и католики живут по Григорианскому календарю. Русская православная церковь живет по Юлианскому календарю. А если ваша программа будет работает на марсоходе (что на самом деле так и есть — Java работает на марсоходе Spirit), то ей придется учитывать марсианский календарь. Как вы понимаете календари имеют различия, но вряд ли вы удивитесь, если вам скажут, что возможность прибавить 5 дней к какой-либо дате должна присутствовать во всех вариантах. Т.е. во всех этих календарях есть общий набор функций, который может иметь одинаковую реализацию. Отсюда рождается идея абстрактного класса, который с одной стороны не может создавать объекты, а с другой стороны, может иметь уже готовые функции.";// create a variable of type String with the text
-		
+		String str = "Например в Java есть весьма наглядный класс java.util.Calendar. В его арсенале достаточно много полезных и нужных функций, но есть одна особенность — он не реализует какой-то конкретный календарь. Думаю, вы знакомы с тем фактом, что на Земле люди живут по разным календарям. Светские власти и католики живут по Григорианскому календарю. Русская православная церковь живет по Юлианскому календарю. А если ваша программа будет работает на марсоходе (что на самом деле так и есть — Java работает на марсоходе Spirit), то ей придется учитывать марсианский календарь. Как вы понимаете календари имеют различия, но вряд ли вы удивитесь, если вам скажут, что возможность прибавить 5 дней к какой-либо дате должна присутствовать во всех вариантах. Т.е. во всех этих календарях есть общий набор функций, который может иметь одинаковую реализацию. Отсюда рождается идея абстрактного класса, который с одной стороны не может создавать объекты, а с другой стороны, может иметь уже готовые функции.";// create
+																																																																																																																																																																																																																																																													// a
+																																																																																																																																																																																																																																																													// variable
+																																																																																																																																																																																																																																																													// of
+																																																																																																																																																																																																																																																													// type
+																																																																																																																																																																																																																																																													// String
+																																																																																																																																																																																																																																																													// with
+																																																																																																																																																																																																																																																													// the
+																																																																																																																																																																																																																																																													// text
+
 		int length = str.length(); // It calculates the length of the line
-		System.out.println("Длина строки = " + length); // the display of the number of characters in the string
-		
+		System.out.println("Длина строки = " + length); // the display of the
+														// number of characters
+														// in the string
+
 		int n = length / 2; // divide in half line
-		String strFirst = str.substring(0, n); // 
+		String strFirst = str.substring(0, n); //
 		String strSecond = str.substring(n, length);
-		System.out.println("Первая строка: " + strFirst); // the display of new variable string with the first part of the line
-		System.out.println("Вторая строка: " + strSecond); // the display of new variable string with the second part of the line
+		System.out.println("Первая строка: " + strFirst); // the display of new
+															// variable string
+															// with the first
+															// part of the line
+		System.out.println("Вторая строка: " + strSecond); // the display of new
+															// variable string
+															// with the second
+															// part of the line
 	}
 
 }

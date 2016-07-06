@@ -1,4 +1,5 @@
 package lesson2;
+
 import java.util.Scanner;
 
 /**
@@ -16,7 +17,7 @@ public class Tasks12 {
 		int n = scn.nextInt();
 		int[] array = new int[n];
 		int x = 0;
-		for (int i = 1; i < n+1; i++) {
+		for (int i = 1; i < n + 1; i++) {
 			x += i;
 		}
 		System.out.println(x);
