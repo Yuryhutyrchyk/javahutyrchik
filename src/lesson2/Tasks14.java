@@ -27,8 +27,8 @@ public class Tasks14 {
 					System.out.println("Вы вышли из приложения");
 					System.exit(0);
 				default:
-					System.out.println("Некорректные данные!");
-					System.exit(0);
+					System.out.println("Введите число!");
+					continue; 
 				}
 			}
 			System.out.println("Введите второй аргумент:");
@@ -41,8 +41,8 @@ public class Tasks14 {
 					System.out.println("Пока!");
 					System.exit(0);
 				default:
-					System.out.println("Некорректные данные!");
-					System.exit(0);
+					System.out.println("Введите число!");
+					continue; 
 				}
 			}
 			System.out.println("Введите желаемую операцию: + - * /");
@@ -65,8 +65,8 @@ public class Tasks14 {
 				System.out.println(num1 / num2);
 				break;
 			default:
-				System.out.println("Некорректные данные... Пока....");
-				System.exit(0);
+				System.out.println("Вы выбрали некоректную операцию...попробуйте снова");
+				continue; 
 			}
 		}
 

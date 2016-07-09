@@ -14,7 +14,7 @@ public class Task9 {
 	 */
 	public static void main(String[] args) { // Method rearranges all the zeros
 												// at the end of the array
-		int[] arr = { 0, 3, 4, 0, 7, 9, 0, 3, 7, 5 }; // array initialization
+		int[] arr = { 0, 3, 2, 2, 0, 9, 0, 3, 7, 5 }; // array initialization
 		int size = arr.length;
 		System.out.print("Первичный вид массива: ");
 		for (int i = 0; i < size; i++) {
@@ -25,7 +25,7 @@ public class Task9 {
 				for (int j = i; j < size - 1; j++) {
 					arr[j] = arr[j + 1];
 				}
-				arr[size - 1] = 0;
+			arr[size - 1] = 0;
 			}
 		}
 		System.out.print("\nВид массива после редактирования: ");
