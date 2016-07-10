@@ -14,7 +14,7 @@ public class Tasks10 {
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) { // 
 		int n = 0;
 		Scanner scn = new Scanner(System.in);
 		System.out.print("¬ведите число!");
@@ -25,7 +25,7 @@ public class Tasks10 {
 		for (int i = 0; i < n; i++) {
 			System.out.print("\n");
 			for (int j = 0; j < n; j++) {
-				arr [i][j] = (int)(Math.random()*10);
+				arr [i][j] = (int)(Math.random()*100);
 				System.out.printf("%3d",arr[i][j]);
 			}
 		}
