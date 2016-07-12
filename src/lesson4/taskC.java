@@ -7,7 +7,7 @@ package lesson4;
  * @author Yura
  *
  */
-public class taskC {
+public class TaskC {
 
 	/**
 	 * @param args
