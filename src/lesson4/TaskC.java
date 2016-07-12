@@ -15,7 +15,7 @@ public class TaskC {
 	public static void main(String[] args) { // From a small text to remove all
 												// symbols except spaces , which
 												// are not letters
-		String str = "***Now!¹¹ %every%thing? i*s ¹all¹ *r*i*g*h*t*!!!";
+		String str = "***Now!Â¹Â¹ %every%thing? i*s Â¹allÂ¹ *r*i*g*h*t*!!!";
 		char[] ch = str.toCharArray(); // It creates an array of characters from
 										// string
 		String s = str.replaceAll("(?u)[^\\pL ]", ""); // removes all but the
