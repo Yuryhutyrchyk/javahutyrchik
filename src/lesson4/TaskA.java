@@ -9,25 +9,32 @@ import java.util.Scanner;
  * @author Yura
  *
  */
-public class Task1 {
+public class TaskA {
 
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) { // method replaces each k -th
+												// letter of the keyboard symbol
 		String str = new String(
 				"Допустим, что существует метод isSubstring, проверяющий, является ли одно слово подстрокой другого. Для двух строк, s1 и s2, напишите код проверки, получена ли строка s2 циклическим сдвигом s1, используя только один вызов метода isSubstring (пример: слово waterbottle получено циклическим сдвигом erbottlewat)");
-		System.out.println(
-				"Допустим, что существует метод isSubstring, проверяющий, является ли одно слово подстрокой другого. Для двух строк, s1 и s2, напишите код проверки, получена ли строка s2 циклическим сдвигом s1, используя только один вызов метода isSubstring (пример: слово waterbottle получено циклическим сдвигом erbottlewat)");
+		System.out.println(str); // display a original text
 		System.out.println("Введите числовое значение k: ");
 		Scanner scn = new Scanner(System.in);
-		int k = scn.nextInt();
+		int k = scn.nextInt(); // Keyboard input value of k
 		System.out.print("Введите символ: \r");
-		String symb = scn.next();
+		String symb = scn.next(); // enter from the keyboard character to
+									// replace
 		String temp;
-		String[] sentence = str.split("[\\s\\.\\!\\,]"); // divide the line into
+		String[] sentence = str.split("[\\s\\.\\!\\,]"); // divide the string
+															// into an array of
 															// words
-		for (int i = 0; i < sentence.length; i++) {
+		for (int i = 0; i < sentence.length; i++) { // each word in the array of
+													// pieces make up : 1) up to
+													// part of the letters k 2)
+													// the symbol instead of the
+													// letters k 3) after the
+													// portion of the letter k
 			if (k < sentence[i].length()) {
 				temp = "";
 				temp += sentence[i].substring(0, k - 1);
@@ -35,8 +42,7 @@ public class Task1 {
 				temp += sentence[i].substring(k, sentence[i].length());
 				sentence[i] = temp;
 			}
-			System.out.print(" " + sentence[i]);
-
+			System.out.print(sentence[i] + " "); // Display the edited line
 		}
 	}
 }
