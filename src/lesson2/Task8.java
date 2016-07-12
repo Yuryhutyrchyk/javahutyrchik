@@ -4,7 +4,7 @@
 package lesson2;
 
 import java.util.Scanner;
-import static java.lang.Math.*;
+import java.lang.Math.*;
 
 /**
  * @author Yura

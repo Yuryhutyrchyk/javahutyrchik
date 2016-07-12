@@ -14,23 +14,26 @@ public class Task9 {
 	 */
 	public static void main(String[] args) { // Method rearranges all the zeros
 												// at the end of the array
-		int[] arr = { 0, 3, 2, 2, 0, 9, 0, 3, 7, 5 }; // array initialization
-		int size = arr.length;
-		System.out.print("Первичный вид массива: ");
-		for (int i = 0; i < size; i++) {
-			System.out.printf("%2d", arr[i]);
+		int[] a = { 1, 0, 7, 4, 0, 0, 9, 1, 0, 2, 5, 8, 0 }; // array
+		int size = a.length;
+		System.out.print("First: ");
+		for (int c = 0; c < size; c++) {
+			System.out.printf("%3d", a[c]);
 		}
-		for (int i = 0; i < size; i++) {
-			if (arr[i] == 0) {
-				for (int j = i; j < size - 1; j++) {
-					arr[j] = arr[j + 1];
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] == 0) {
+				for (int j = i + 1; j < a.length; j++) {
+					if (a[j] != 0) {
+						a[i] = a[j];
+						a[j] = 0;
+						break;
+					}
 				}
-			arr[size - 1] = 0;
 			}
 		}
-		System.out.print("\nВид массива после редактирования: ");
-		for (int i = 0; i < size; i++) {
-			System.out.printf("%2d", arr[i]);
+		System.out.print("\n" + "Change:");
+		for (int c = 0; c < size; c++) {
+			System.out.printf("%3d", a[c]);
 		}
 	}
 }
