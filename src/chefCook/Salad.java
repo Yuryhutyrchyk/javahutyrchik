@@ -54,12 +54,12 @@ public class Salad {
 
 	@Override
 	public String toString() {
-		//salad sorts , taking on input parameters by type of Vegetable
+		//interface specifies the method that is implemented in the class
 		salad.sort(new TypeComparator());
 		String smin = "";
 		String smax = "";
 		int salcalor = this.foodValue();
-		String s = "Salad " + this.getName() + (char) 13 + "-------------------" + (char) 13;
+		String s = this.getName() + (char) 13 + "-------------------" + (char) 13;
 		for (Vegetable v : salad) {
 			long c = Math.round((double) v.getWeight() * v.getCalor() / 100);
 			if (c < .1 * salcalor)
@@ -74,7 +74,7 @@ public class Salad {
 				+ (char) 13 + "The least-calorie ingredient: " + smin + (char) 13;
 	}
 
-	//Compare vegetables for processing type
+	//class implements the method specified in the interface
 	private static class TypeComparator implements Comparator<Vegetable> {
 		
 		@Override
