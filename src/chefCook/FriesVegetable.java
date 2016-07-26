@@ -1,11 +1,20 @@
 package chefCook;
 
-public class FriesVegetable extends Vegetable{
-	public FriesVegetable (String name, int weight){
+/**
+ * This class extends the parent class , it inherits the properties and
+ * determines the characteristic of the class method "preparation"
+ * implementation.
+ * 
+ * @author Yura
+ */
+
+public class FriesVegetable extends Vegetable {
+	public FriesVegetable(String name, int weight) {
 		super(name, weight);
 	}
-	//implements declared in the parent class abstract method
-	public String preparation(){
+
+	// implements declared in the parent class abstract method
+	public String preparation() {
 		return "Wash, cut, fry";
 	}
 }

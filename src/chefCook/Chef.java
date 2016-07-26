@@ -1,16 +1,17 @@
 package chefCook;
 
 /**
- * It describes a class chef and determines its functionality
+ * This class describes the class chef and determines its functionality
+ * 
+ * @author Yura
  */
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Chef {
-	private String name; // chef's name
+	private String name;
 
-	// Default constructor. Chef's name is Bob.
 	public Chef() {
 		name = "Yura";
 	}
@@ -24,8 +25,6 @@ public class Chef {
 		return this;
 	}
 
-	// method creates an object salad, in the parameters name and sends it to
-	// the list of ingredients
 	public void makeVinaigrette() {
 		Salad Vinaigrette = new Salad("Vinaigrette", new BoiledVegetables("Carrot", 50),
 				new BoiledVegetables("Beet", 65), new CannedVegetable("Peas", 60), new RawVegetables("Tomato", 70),
@@ -48,7 +47,7 @@ public class Chef {
 	public void fryPotato() {
 		List<Salad> frenchFries = new ArrayList<>();
 		frenchFries.add(new Salad().setName("French fries").setComponent(new FriesVegetable("Tomato", 300))
-				.setComponent(new SpicyVegetable("Salt", 10)));
+				.setComponent(new SpicyVegetable("Salt", 20)));
 		System.out.println(frenchFries);
 		System.out.println("French Fries is ready!");
 		System.out.println("-------------------" + (char) 13);
