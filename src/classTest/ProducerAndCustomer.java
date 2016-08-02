@@ -4,25 +4,25 @@ import java.util.concurrent.Semaphore;
 
 public class ProducerAndCustomer {
 	int n;
-	int b;;
+	int b;
 
-	static Semaphore semCon = new Semaphore(0);
-	static Semaphore semProd = new Semaphore(1);
+	static Semaphore consumer = new Semaphore(0);
+	static Semaphore produser = new Semaphore(1);
 
 	void get() {
 		try {
-			semCon.acquire();
+			consumer.acquire();
 		} catch (InterruptedException e) {
 			System.out.println("InterruptedException caught");
 		}
 		n = n - 1;
 		System.out.println("Producer reduced resource: i = " + n);
-		semProd.release();
+		produser.release();
 	}
 
 	void put(int n) {
 		try {
-			semProd.acquire();
+			produser.acquire();
 		} catch (InterruptedException e) {
 			System.out.println("InterruptedException caught");
 		}
@@ -30,7 +30,8 @@ public class ProducerAndCustomer {
 		this.n = n;
 		System.out.println("Step " + b + ":");
 		System.out.println("Customer increased resource: i = " + n);
-		semCon.release();
+		consumer.release();
+		b++;
 	}
 }
 
@@ -59,11 +60,5 @@ class Customer implements Runnable {
 	public void run() {
 		for (int i = 0; i < 5; i++)
 			ProducerAndCustomer.get();
-	}
-
-public static void main(String args[]) {
-	ProducerAndCustomer ProducerAndCustomer = new ProducerAndCustomer();
-	new Customer(ProducerAndCustomer);
-	new Producer(ProducerAndCustomer);
 	}
 }
