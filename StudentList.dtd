@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!ELEMENT studentList (
+<!ELEMENT student (
+<!ELEMENT firstName ( #PCDATA ) >,
+<!ELEMENT lastName ( #PCDATA ) >,
+<!ELEMENT age ( #PCDATA ) >,
+<!ELEMENT faculty (ksis) > ) > +) >
