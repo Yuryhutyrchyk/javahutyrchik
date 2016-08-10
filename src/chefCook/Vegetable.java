@@ -14,7 +14,7 @@ public abstract class Vegetable {
 	private Vegetabl list = Vegetabl.Vgtbl;
 
 	private enum Vegetabl {
-		Vgtbl, Carrot, Beet, Salt, Dill, BellPepper, Peas, Tomato, Cucumber, Potato
+		Vgtbl, carrot, beet, salt, dill, pepper, peas, tomato, cucumber, potato
 	}
 
 	Vegetable(String name, int weight) {
@@ -27,36 +27,36 @@ public abstract class Vegetable {
 	// It determines the number of calories in 100 grams of each vegetable
 	int getCalor() {
 		switch (Vegetabl.valueOf(name)) {
-		case Carrot:
+		case carrot:
 			calorie = 123;
 			break;
-		case Beet:
+		case beet:
 			calorie = 97;
 			break;
-		case Salt:
+		case salt:
 			calorie = 6;
 			break;
-		case Dill:
+		case dill:
 			calorie = 9;
 			break;
-		case BellPepper:
+		case pepper:
 			calorie = 127;
 			break;
-		case Peas:
+		case peas:
 			calorie = 174;
 			break;
-		case Tomato:
+		case tomato:
 			calorie = 99;
 			break;
-		case Cucumber:
+		case cucumber:
 			calorie = 55;
 			break;
-		case Potato:
+		case potato:
 			calorie = 153;
 			break;
 		default:
 			calorie = 0;
-			System.out.println("unknown ingredient");
+			System.out.println(Restaurant.rb.getString("unknownIngredient"));
 		}
 		return calorie;
 	}

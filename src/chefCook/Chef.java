@@ -13,7 +13,7 @@ public class Chef {
 	private String name;
 
 	public Chef() {
-		name = "Yura";
+		name = Restaurant.rb.getString("yura");
 	}
 
 	public String getName() {
@@ -26,30 +26,30 @@ public class Chef {
 	}
 
 	public void makeVinaigrette() {
-		Salad Vinaigrette = new Salad("Vinaigrette", new BoiledVegetables("Carrot", 50),
-				new BoiledVegetables("Beet", 65), new CannedVegetable("Peas", 60), new RawVegetables("Tomato", 70),
-				new SpicyVegetable("Dill", 10), new BoiledVegetables("Potato", 130));
+		Salad Vinaigrette = new Salad(Restaurant.rb.getString("vinaigrette"), new BoiledVegetables("carrot", 50),
+				new BoiledVegetables("beet", 65), new CannedVegetable("peas", 60), new RawVegetables("tomato", 70),
+				new SpicyVegetable("dill", 10), new BoiledVegetables("potato", 130));
 		System.out.println(Vinaigrette);
-		System.out.println("Salad Vinaigrette is ready!");
+		System.out.println(Restaurant.rb.getString("saladVinaigretteIsReady"));
 		System.out.println("-------------------" + (char) 13);
 	}
 
 	public void makeSpring() {
 		List<Salad> Spring = new ArrayList<>();
-		Spring.add(new Salad().setName("Spring").setComponent(new RawVegetables("Tomato", 80))
-				.setComponent(new RawVegetables("Cucumber", 120)).setComponent(new RawVegetables("BellPepper", 100))
-				.setComponent(new SpicyVegetable("Salt", 10)));
+		Spring.add(new Salad().setName(Restaurant.rb.getString("spring")).setComponent(new RawVegetables("tomato", 80))
+				.setComponent(new RawVegetables("cucumber", 120)).setComponent(new RawVegetables("pepper", 100))
+				.setComponent(new SpicyVegetable("salt", 10)));
 		System.out.println(Spring);
-		System.out.println("Salad Spring is ready!");
+		System.out.println(Restaurant.rb.getString("saladSpringIsReady"));
 		System.out.println("-------------------" + (char) 13);
 	}
 
 	public void fryPotato() {
 		List<Salad> frenchFries = new ArrayList<>();
-		frenchFries.add(new Salad().setName("French fries").setComponent(new FriesVegetable("Tomato", 300))
-				.setComponent(new SpicyVegetable("Salt", 20)));
+		frenchFries.add(new Salad().setName(Restaurant.rb.getString("frenchFries")).setComponent(new FriesVegetable("tomato", 300))
+				.setComponent(new SpicyVegetable("salt", 20)));
 		System.out.println(frenchFries);
-		System.out.println("French Fries is ready!");
+		System.out.println(Restaurant.rb.getString("frenchFriesIsReady"));
 		System.out.println("-------------------" + (char) 13);
 	}
 }

@@ -73,9 +73,9 @@ public class Salad {
 			}
 			s = s + v.getName() + "  " + v.getWeight() + " g " + v.preparation() + (char) 13;
 		}
-		return s + "Calories: " + salcalor + " kcal" + (char) 13 + "-------------------" + (char) 13
-				+ "The most high-calorie ingredient: " + smax + cmax + " kcal" + (char) 13
-				+ "The least-calorie ingredient: " + smin + cmin + " kcal" + (char) 13;
+		return s + Restaurant.rb.getString("calories") + salcalor + Restaurant.rb.getString("kcal") + (char) 13 + "-------------------" + (char) 13
+				+ Restaurant.rb.getString("theMostHighCalorieIngredient") + smax + cmax + Restaurant.rb.getString("kcal") + (char) 13
+				+ Restaurant.rb.getString("theLeastCalorieIngredient") + smin + cmin + Restaurant.rb.getString("kcal") + (char) 13;
 	}
 
 	// class implements the method specified in the interface

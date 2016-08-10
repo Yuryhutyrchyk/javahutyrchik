@@ -15,6 +15,6 @@ public class BoiledVegetables extends Vegetable {
 
 	// implements declared in the parent class abstract method
 	public String preparation() {
-		return "Boil, cut, add";
+		return Restaurant.rb.getString("boilCutAdd");
 	}
 }

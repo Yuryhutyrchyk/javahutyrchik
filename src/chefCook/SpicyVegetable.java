@@ -15,6 +15,6 @@ public class SpicyVegetable extends Vegetable {
 
 	// implements declared in the parent class abstract method
 	public String preparation() {
-		return "Add";
+		return Restaurant.rb.getString("add");
 	}
 }

@@ -8,24 +8,61 @@ package chefCook;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.ResourceBundle;
+
 
 public class Restaurant {
+	static Date currentDate = new Date();
+	static Locale locale = askLocale();
+	static String FILENAME;
+	static ResourceBundle rb;
+	static DateFormat df = DateFormat.getDateInstance(DateFormat.FULL, locale);
+	
+	@SuppressWarnings("resource")
+	private static Locale askLocale() {
+		System.out.println("Please choose language:");
+		System.out.println("1. Русский");
+		System.out.println("2. English");
+		Scanner scn = new Scanner(System.in);
+		int localeCode = scn.nextInt();
+		Locale locale = null;
+		switch (localeCode) {
+		case 1:
+			FILENAME = "chefCook.localization/Loc_ru_Ru";
+			locale = new Locale("ru", "RU");
+			rb = ResourceBundle.getBundle(FILENAME, locale);
+			break;
+		case 2:
+			FILENAME = "chefCook.localization/Loc_en_En";
+			locale = new Locale("en", "EN");
+			rb = ResourceBundle.getBundle(FILENAME, locale);
+			break;
+		}
+		return locale;
+	}
+	
 	public static void main(String[] args) {
+		
+		System.out.println(df.format(currentDate));
 		Chef chef = new Chef();
-		System.out.println("Hi! My name is " + chef.getName() + ".\n" + "What do you want to cook today?\n");
+		System.out.println(rb.getString("hiMyNameIs") + chef.getName() + ".\n" 
+		+ rb.getString("whatDoYouWantToCookToday") + "?\n");
 		int choice = -1;
 		Scanner scn = new Scanner(System.in);
 		while (choice != 0) {
-			System.out.println("Menu:");
-			System.out.println("1. Prepare salad - Vinaigrette");
-			System.out.println("2. Prepare salad - Spring");
-			System.out.println("3. Prepare french fries");
-			System.out.println("0. Exit");
-			System.out.println("Make your choice by selecting a number, please");
+			System.out.println(rb.getString("menu"));
+			System.out.println(rb.getString("prepareSaladVinaigrette"));
+			System.out.println(rb.getString("prepareSaladSpring"));
+			System.out.println(rb.getString("prepareFrenchFries"));
+			System.out.println(rb.getString("exit"));
+			System.out.println(rb.getString("makeYourChoiceBySelectingANumberPlease"));
 			try {
 				choice = scn.nextInt();
 			} catch (InputMismatchException e) {
-				System.out.println("Wrong choice!");
+				System.out.println(rb.getString("wrongChoice"));
 				scn.next();
 				choice = -1;
 			}
@@ -40,7 +77,7 @@ public class Restaurant {
 				chef.fryPotato();
 				break;
 			case (0):
-				System.out.println("Bye!");
+				System.out.println(rb.getString("bye"));
 				System.exit(0);
 				break;
 			default:

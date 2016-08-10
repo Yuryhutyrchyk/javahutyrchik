@@ -15,6 +15,6 @@ public class FriesVegetable extends Vegetable {
 
 	// implements declared in the parent class abstract method
 	public String preparation() {
-		return "Wash, cut, fry";
+		return Restaurant.rb.getString("washCutFry");
 	}
 }
