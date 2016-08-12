@@ -23,6 +23,7 @@ public class Restaurant {
 	
 	@SuppressWarnings("resource")
 	private static Locale askLocale() {
+		Logger.getLogger().addLogInfo("The user selects the interface language");
 		System.out.println("Please choose language:");
 		System.out.println("1. Русский");
 		System.out.println("2. English");
@@ -45,7 +46,7 @@ public class Restaurant {
 	}
 	
 	public static void main(String[] args) {
-		
+		Logger.getLogger().addLogInfo("The app launched");
 		System.out.println(df.format(currentDate));
 		Chef chef = new Chef();
 		System.out.println(rb.getString("hiMyNameIs") + chef.getName() + ".\n" 
@@ -63,22 +64,27 @@ public class Restaurant {
 				choice = scn.nextInt();
 			} catch (InputMismatchException e) {
 				System.out.println(rb.getString("wrongChoice"));
+				Logger.getLogger().addLogInfo("Incorrect user input");
 				scn.next();
 				choice = -1;
 			}
 			switch (choice) {
 			case (1):
 				chef.makeVinaigrette();
+				Logger.getLogger().addLogInfo("User make choise");
 				break;
 			case (2):
 				chef.makeSpring();
+				Logger.getLogger().addLogInfo("User make choise");
 				break;
 			case (3):
 				chef.fryPotato();
+				Logger.getLogger().addLogInfo("User make choise");
 				break;
 			case (0):
 				System.out.println(rb.getString("bye"));
 				System.exit(0);
+				Logger.getLogger().addLogInfo("App is cloused");
 				break;
 			default:
 				break;
