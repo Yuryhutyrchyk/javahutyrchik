@@ -22,7 +22,7 @@ public class MainClassCashbox {
 		int totalCashbox = 3;
 		// specifies the number of customers
 		int totalCustomer = 20;
-		System.out.println("Cashbox ¹   |" + " Customer ¹  |" + " Products ");
+		System.out.println("Cashbox â„–   |" + " Customer â„–  |" + " Products ");
 
 		// Randomly fills all customers with their numbering
 		for (int j = 1; j <= totalCustomer; j++) {
